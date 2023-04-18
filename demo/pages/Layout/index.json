@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Button",
+  "defaultTitle": "Layout",
   "usingComponents": {
     "container": "antd-mini/es/Container/index"
   }

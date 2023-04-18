@@ -1,0 +1,25 @@
+<container title="搜索下拉">
+  <input
+    placeholder="请输入内容"
+    onChange="onChange"
+    className="search-bar"
+    confirm-type="search"
+    allowClear
+    focus
+    onConfirm="onConfirm"
+  >
+    <icon slot="prefix" type="SearchOutline" />
+  </input>
+  
+  <scroll-view scroll-y="{{true}}" class="search-recommend" a:if="{{value}}">
+    <view a:if="{{loading}}" class="search-loading">
+      <loading color="#1677ff" />
+    </view>
+    <view a:else a:for="{{ searchRecommendList }}" class="search-recommend-item" data-index="{{index}}" onTap="onTap">
+      <icon type="SearchOutline" class="search-recommend-item-icon"/>{{item}}
+    </view>
+    
+  </scroll-view>
+
+</container>
+

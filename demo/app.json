@@ -1,16 +1,13 @@
 {
   "pages": [
-    "pages/Layout/index"
+    "pages/Layout/index",
+    "pages/Search/index"
   ],
   "window": {
-    "enableWK": "YES",
-    "enableDSL": "YES",
-    "enableJSC": "YES",
     "defaultTitle": "小程序版 antd-mini 库",
     "titleBarColor": "#000000",
     "pullRefresh": false,
-    "allowsBounceVertical": false,
+    "allowsBounceVertical": "NO",
     "enableInPageRenderInput": "YES"
-  },
-  "debug": true
+  }
 }
