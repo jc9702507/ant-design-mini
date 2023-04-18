@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "Rate",
-  "usingComponents": {
-    "rate": "../../../src/Rate/index",
-    "icon": "../../../src/Icon/index",
-    "container": "../../../src/Container/index"
-  },
-  "allowsBounceVertical": "NO"
-}

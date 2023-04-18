@@ -9,6 +9,8 @@ const config: IConfig = {
   locales: [['zh', '中文']],
   mode: 'site',
   hash: true,
+  publicPath: '/ant-design-mini/',
+  base: '/ant-design-mini/',
   // routes: [
   //   { path: '/preview', component: 'plugin/preview.tsx' },
   // ],
@@ -346,37 +348,13 @@ const config: IConfig = {
   navs: {
     zh: [
       {
-        title: '指南',
-        path: '/guide',
-      },
-      {
-        title: '组件',
+        title: '示例',
         path: '/components',
       },
       {
-        title: '资源',
-        path: '/resources',
-      },
-      {
-        title: '国内镜像',
-        path: 'https://ant-design-mini.antgroup.com',
-      },
-      {
-        title: 'v1',
-        // 可通过如下形式嵌套二级导航菜单，目前暂不支持更多层级嵌套：
-        children: [
-          { title: 'v1', path: 'https://mini.ant.design' },
-          { title: 'v0', path: 'https://0x-mini.ant.design' },
-        ],
-      },
-      {
-        title: '发布日志',
-        path: 'https://github.com/ant-design/ant-design-mini/releases',
-      },
-      {
         title: '仓库地址',
-        path: 'https://github.com/ant-design/ant-design-mini',
-      },
+        path: 'https://github.com/jc9702507/ant-design-mini'
+      }
     ],
   },
   menus: {
@@ -386,40 +364,7 @@ const config: IConfig = {
         path: 'index',
       },
     ],
-    '/guide': [
-      {
-        title: '快速开始',
-        path: '/guide/quick-start',
-      },
-      {
-        title: '定制主题',
-        path: '/guide/customize-theme',
-      },
-      {
-        title: '升级到v1',
-        path: '/guide/migration-v1',
-      },
-      {
-        title: '贡献指南',
-        path: '/guide/contribute',
-      },
-      {
-        title: '常见问题',
-        path: '/guide/faq',
-      },
-    ],
   },
-
-  chainWebpack(config) {
-    // @ts-ignore
-    // config.plugin('MonacoWebpackPlugin').use(MonacoWebpackPlugin, [
-    //   {
-    //     languages: ['javascript', 'typescript', 'json', 'css', 'html', 'xml'],
-    //     publicPath:
-    //       process.env.NODE_ENV === 'development' ? 'http://localhost:8000/' : 'https://gw.alipayobjects.com/a/minidev/',
-    //   },
-    // ])
-  }
 };
 
 export default config;

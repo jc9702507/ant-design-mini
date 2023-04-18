@@ -1,11 +1,5 @@
 {
-  "format": 2,
-  "compileOptions": {
-    "typescript": true,
-    "less": true,
-    "component2": true,
-    "enableNodeModuleBabelTransform": true
-  },
-  "uploadExclude": ["dist/**/*"],
+  "enableAppxNg": true,
+  "component2": true,
   "miniprogramRoot": "demo"
 }

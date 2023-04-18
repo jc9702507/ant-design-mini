@@ -59,35 +59,6 @@ const Previewer: React.FC<IProps> = (props) => {
   return (
     <div className="previewer">
       {!loaded && <div className="previewer-loading" />}
-      <div className="btns">
-        <Popover content={
-          <div style={{textAlign: 'center'}}>
-            <QRCodeSVG value={`alipays://platformapi/startapp?appId=2021003169685088&page=${page}`} />
-          </div>
-        } title={<div style={{textAlign: 'center'}}>使用支付宝扫码</div>} placement="bottom">
-          <div className="btn">
-            <QrcodeOutlined />
-          </div>
-        </Popover>
-
-        {
-          !noChangeButton
-          &&
-          <Tooltip
-            title={theme === 'dark' ? '使用基础主题' : '使用深色主题'}
-            placement="bottom"
-          >
-            <div className="btn">
-              <i className={`iconfont ${theme === 'dark' ? 'icon-sun' : 'icon-moon'}`} onClick={() => {
-                changeURL(url);
-              }} style={{
-                fontSize: theme === 'dark' ? 20 : 14,
-              }} />
-            </div>
-          </Tooltip>
-        }
-     
-      </div>
       <iframe
         src={url}
         onLoad={() => setLoaded(true)}

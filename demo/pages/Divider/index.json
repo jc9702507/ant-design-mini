@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "Divider",
-  "usingComponents": {
-    "divider": "../../../src/Divider/index",
-    "container": "../../../src/Container/index"
-  }
-}

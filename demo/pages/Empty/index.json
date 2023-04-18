@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "Empty",
-  "usingComponents": {
-    "empty": "../../../src/Empty/index",
-    "container": "../../../src/Container/index",
-    "radio-group": "../../../src/Radio/RadioGroup/index",
-    "button": "../../../src/Button/index"
-  }
-}

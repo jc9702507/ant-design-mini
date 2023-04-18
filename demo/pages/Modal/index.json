@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "Modal",
-  "usingComponents": {
-    "modal": "../../../src/Modal/index",
-    "button": "../../../src/Button/index",
-    "icon": "../../../src/Icon/index",
-    "container": "../../../src/Container/index"
-  }
-}

@@ -5,8 +5,8 @@
   <link rel="shortcut icon" href="https://gw.alipayobjects.com/zos/rmsportal/wNkELvnLHXPAlmqutRPI.png" type="image/x-icon">
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <link rel="stylesheet" type="text/css" href="https://gw.alipayobjects.com/os/lib/alipay/openbox-preview/1.0.7/web/preview.css" />
-  <link rel="preload" href="/preview.json" as="fetch" crossorigin>
-  <link rel="preload" href="/preview-theme-dark.json" as="fetch" crossorigin>
+  <link rel="preload" href="/ant-design-mini/preview.json" as="fetch" crossorigin>
+  <link rel="preload" href="/ant-design-mini/preview-theme-dark.json" as="fetch" crossorigin>
   <style>
     body {
       margin: 0;
@@ -103,7 +103,7 @@
         dist = arr[0];
         sourceCode = arr[1];
       } else {
-        const obj = await fetch(theme === 'dark' ? '/preview-theme-dark.json' : '/preview.json').then(res => res.json());
+        const obj = await fetch(theme === 'dark' ? '/preview-theme-dark.json' : '/ant-design-mini/preview.json').then(res => res.json());
         dist = obj.dist;
         sourceCode = {};
         const str = page.replace('index', '');

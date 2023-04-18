@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "Tag",
-  "usingComponents": {
-    "tag": "../../../src/Tag/index",
-    "container": "../../../src/Container/index"
-  }
-}

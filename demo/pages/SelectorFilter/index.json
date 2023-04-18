@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "SelectorFilter",
-  "usingComponents": {
-    "selector": "../../../src/Selector/index",
-    "icon": "../../../src/Icon/index"
-  }
-}

@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container view {
+  flex: 1;
+  text-align: center;
+}

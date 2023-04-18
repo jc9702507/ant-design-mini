@@ -2,7 +2,6 @@ const path = require('path');
 const { fork } = require("child_process");
 const { minidev } = require('minidev');
 const fs= require('fs');
-const compile = require('./compile');
 const getSourceCode = require('./getSourceCode');
 
 
@@ -20,26 +19,6 @@ async function buildMiniProgram() {
     enableTypescript: true,
     cacheDir: cache,
   });
-  const colorFilename = path.join(__dirname, '../src/style/themes/color.less');
-  const colorContent = await fs.promises.readFile(colorFilename, 'utf-8');
-  const appJSONFilename = path.join(__dirname, '../demo/app.json');
-  const appJSONContent = await fs.promises.readFile(appJSONFilename, 'utf-8');
-  await fs.promises.writeFile(colorFilename, colorContent.replace('default', 'dark'));
-  await fs.promises.writeFile(appJSONFilename, appJSONContent.replace('#FFFFFF', '#000000'));
-  if (fs.existsSync(cache)) {
-    fs.rmdirSync(cache, {
-      recursive: true,
-    }); 
-  }
-  await minidev.build({
-    project: path.join(__dirname, '../'),
-    output: path.join(__dirname, '../dist-theme-dark'),
-    enableLess: true,
-    enableTypescript: true,
-    cacheDir: cache,
-  });
-  await fs.promises.writeFile(colorFilename, colorContent);
-  await fs.promises.writeFile(appJSONFilename, appJSONContent);
 }
 
 function buildDocs() {
@@ -96,14 +75,14 @@ async function buildPreview(theme = 'default') {
 
 (async () => {
   try {
-    await compile();
+    // await compile();
     await Promise.all([
       buildMiniProgram(),
       buildDocs(),
     ]);
     await Promise.all([
       buildPreview(),
-      buildPreview('dark'),
+      // buildPreview('dark'),
     ]);
     console.log('build success!');
   } catch(err) {

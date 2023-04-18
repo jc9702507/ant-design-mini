@@ -1,0 +1,38 @@
+<container title="用flex来做表格示例">
+  <view class="container" style="background: blue;">
+    <view>
+      1
+    </view>
+    <view>
+      2
+    </view>
+    <view>
+      3
+    </view>
+  </view>
+
+  <view class="container" style="background: #eee;">
+    <view>
+      1
+    </view>
+    <view>
+      2
+    </view>
+    <view>
+      3
+    </view>
+  </view>
+
+  <view class="container" style="background: #eee;">
+    <view>
+      1
+    </view>
+    <view>
+      2
+    </view>
+    <view>
+      3
+    </view>
+  </view>
+</container>
+

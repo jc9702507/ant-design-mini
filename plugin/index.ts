@@ -17,7 +17,7 @@ export default (api: IApi) => {
           const folder = pageElem.join('/') + '/';
           return {
             previewerProps: {
-              herboxUrl: `/preview.html?page=${opts.attrs.src}&folder=${folder}&theme=light&compilerServer=${process.env.SERVER || ''}&noChangeButton=${opts.attrs.nochangebutton || ''}`
+              herboxUrl: `/ant-design-mini/preview.html?page=${opts.attrs.src}&folder=${folder}&theme=light&compilerServer=${process.env.SERVER || ''}&noChangeButton=${opts.attrs.nochangebutton || ''}`
             },
           };
         }

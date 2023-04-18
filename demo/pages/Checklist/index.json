@@ -1,8 +1,0 @@
-{
-  "defaultTitle": "Checklist",
-  "usingComponents": {
-    "checklist": "../../../src/Checklist/index",
-    "icon": "../../../src/Icon/index",
-    "container": "../../../src/Container/index"
-  }
-}
