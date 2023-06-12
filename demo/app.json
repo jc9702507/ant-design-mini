@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/Layout/index",
-    "pages/Search/index"
+    "pages/Search/index",
+    "pages/Select/index"
   ],
   "window": {
     "defaultTitle": "小程序版 antd-mini 库",

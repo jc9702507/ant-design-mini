@@ -1,0 +1,24 @@
+<list-item>
+  选择城市
+  <picker
+    slot="extra"
+    onOk="handleOk"
+    onCancel="handleCancel"
+    value="{{value}}"
+    placeholder="请选择"
+    title="请选择"
+    onChange="handleChange"
+    options="{{list}}">
+
+    <view slot="title">
+      <input
+        placeholder="请输入内容"
+        onChange="onChange"
+        confirm-type="search"
+        allowClear
+      >
+        <icon slot="prefix" type="SearchOutline" />
+      </input>
+    </view>
+  </picker>
+</list-item>

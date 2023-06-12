@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Search",
+  "usingComponents": {
+    "input": "antd-mini/es/Input/index",
+    "icon": "antd-mini/es/Icon/index",
+    "list-item": "antd-mini/es/List/ListItem/index",
+    "picker": "antd-mini/es/Picker/index"
+  }
+}
