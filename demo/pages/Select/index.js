@@ -1,9 +1,21 @@
-const list = ['北京', '上海', '深圳', '广州', '南京', '武汉', '无锡', '苏州'];
+async function request() {
+  await new Promise(r => setTimeout(r, 1000));
+  return ['北京', '上海', '深圳', '广州', '南京', '武汉', '无锡', '苏州'];
+}
 
 Page({
   data: {
-    value: '上海',
-    list,
+    value: '',
+    list: [],
+  },
+  onLoad() {
+    request().then(list => {
+      this.list = list;
+      this.setData({
+        value: '上海',
+        list,
+      });
+    })
   },
   onVisibleChange(visible) {
     if (visible) {
@@ -12,21 +24,21 @@ Page({
   },
   onChange(val) {
     val = val.trim();
-    const filterList = list.filter(item => item.includes(val));
+    const list = this.list.filter(item => item.includes(val));
     this.setData({
-      list: filterList,
-      value: filterList.length === list.length ? this.value : filterList[0],
+      list,
+      value: list.length === this.list.length ? this.value : list[0],
     });
   },
   onOk(value) {
     this.setData({
-      list,
+      list: this.list,
       value,
     });
   },
   onCancel() {
     this.setData({
-      list,
+      list: this.list,
       value: this.value,
     });
   },
