@@ -2,8 +2,9 @@
   选择城市
   <picker
     slot="extra"
-    onOk="handleOk"
-    onCancel="handleCancel"
+    onOk="onOk"
+    onVisibleChange="onVisibleChange"
+    onCancel="onCancel"
     value="{{value}}"
     placeholder="请选择"
     title="请选择"

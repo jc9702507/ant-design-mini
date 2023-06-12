@@ -1,37 +1,33 @@
+const list = ['北京', '上海', '深圳', '广州', '南京', '武汉', '无锡', '苏州'];
+
 Page({
   data: {
     value: '上海',
-    list: ['北京', '上海', '深圳', '广州', '南京', '武汉', '无锡', '苏州'],
+    list,
+  },
+  onVisibleChange(visible) {
+    if (visible) {
+      this.value = this.data.value;
+    }
   },
   onChange(val) {
     val = val.trim();
-    if (!val) {
-      return;
-    }
-    const value = this.data.list.find(item => {
-      if (item.includes(val)) {
-        return item;
-      }
-    });
-    if (value) {
-      if (!this.lastValue) {
-        this.lastValue = this.data.value;
-      }
-      this.setData({
-        value,
-      });
-    }
-  },
-  handleOk(value) {
+    const filterList = list.filter(item => item.includes(val));
     this.setData({
+      list: filterList,
+      value: filterList.length === list.length ? this.value : filterList[0],
+    });
+  },
+  onOk(value) {
+    this.setData({
+      list,
       value,
     });
   },
-  handleCancel() {
-    if (this.lastValue) {
-      this.setData({
-        value: this.lastValue,
-      });
-    }
+  onCancel() {
+    this.setData({
+      list,
+      value: this.value,
+    });
   },
 });
